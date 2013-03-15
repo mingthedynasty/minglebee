@@ -39,6 +39,11 @@ a
 	-webkit-transition: all .2s cubic-bezier(0, 0, 0.25, 1);
 }
 
+a:visited
+{
+	color: inherit;
+}
+
 a:hover, a:link:hover
 {
 	color: rgb(218, 0, 130);
@@ -56,12 +61,12 @@ p
 	line-height: 1.5em;
 }
 
-/*p
+p
 {
-	font-size: 17px;
-	line-height: 1.4em;
-	font-family: "chaparral-pro", serif;
-}*/
+	font-size: 15px;
+	line-height: 1.5em;
+	font-family: "museo-slab", sans-serif;
+}
 
 
 
@@ -213,7 +218,7 @@ nav li a.selected
 	text-transform: uppercase;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 2.4em;
 	color: #BBB;
 }
@@ -224,6 +229,11 @@ nav li a.selected
 	line-height: 1.6em;
 }
 
+/*#projectInfo a:visited
+{
+	color: #555;
+}
+*/
 #projectImages
 {
 	float: right;

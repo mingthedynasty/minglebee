@@ -35,6 +35,27 @@
 			</ul>
 		</script>
 
+		<script id="info-link-template" type="text/x-handlebars-template">
+			<p><a href="{{url}}" target="_blank">{{label}}</a></p>
+		</script>
+
+		<script id="info-link-list-template" type="text/x-handlebars-template">
+			<ul>
+				{{#each item}}
+				<li><a href="{{url}}" target="_blank">{{label}}</a></li>
+				{{/each}}
+			</ul>
+		</script>
+
+		<script id="project-image-template" type="text/x-handlebars-template">
+			{{#each image}}
+			<figure>
+				<div class="project-image"></div>
+				<figurecaption>{{caption}}</figurecaption>
+			</figure>
+			{{/each}}
+		</script>
+
 	</head>
 
 	<body>
@@ -51,7 +72,7 @@
 		<div id="me">
 			<h1 class="center-container">Hello! I'm Ming.</h1>
 			<div id="meImage"></div>
-			<p>I love things that are functional, logical, and beautiful all at the same time. I love to make stuff like applications, Valentines &amp; berry pies.  My current passions are cross-stitching, Panda Cam &amp; noodles. I am rarely seen in jeans, an avid sports fan (football, F1, MotoGP) &amp; a devout homebody who loves to travel.</p>
+			<p>I love things that are functional, logical, and beautiful all at the same time. I love to make stuff like applications, Valentines &amp; berry pies.  My current passions are cross-stitching, Panda Cam &amp; noodles. I am rarely seen in jeans, am an avid sports fan (football, F1, MotoGP), #latergram a lot, &amp; am a devout homebody who loves to travel.</p>
 			<div class="separator"></div>
 			<ul>
 				<li><a href="resume.html">Resume</a></li>
@@ -67,7 +88,6 @@
 					<div class="separator"></div>
 					<section id="site">
 						<h1>Site</h1>
-						<p><a></a></p>
 					</section>
 					<section id="background">
 						<h1>Background</h1>
@@ -77,29 +97,17 @@
 						<h1>Features</h1>
 						<p></p>
 					</section>
+					<section id="links">
+						<h1>Links</h1>
+					</section>
 					<section id="roles">
 						<h1>Roles</h1>
-						<ul></ul>
 					</section>
 					<section id="techs">
 						<h1>Technologies</h1>
-						<ul></ul>
 					</section>
 				</div>
-				<div id="projectImages">
-					<figure>
-						<div class="project-image"></div>
-						<figurecaption>Season View</figurecaption>
-					</figure>
-					<figure>
-						<div class="project-image"></div>
-						<figurecaption>Race View</figurecaption>
-					</figure>
-					<figure>
-						<div class="project-image"></div>
-						<figurecaption>Gap View</figurecaption>
-					</figure>
-				<div>
+				<div id="projectImages"><div>
 			</div>
 		</div>
 	</body>

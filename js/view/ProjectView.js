@@ -1,12 +1,18 @@
 var ProjectView = Backbone.View.extend(
 {
+	linkTemplate: null,
 	listTemplate: null,
+	linkListTemplate: null,
+	imageTemplate: null,
 
 	initialize: function()
 	{
 		// Template
+		this.linkTemplate = Handlebars.compile($("#info-link-template").html());
+		this.linkListTemplate = Handlebars.compile($("#info-link-list-template").html());
 		this.listTemplate = Handlebars.compile($("#info-list-template").html());
-
+		this.imageTemplate = Handlebars.compile($("#project-image-template").html());
+		
 		// Handlers
 		this.model.on("change:activeProject", this.handleProjectChange, this);
 
@@ -29,7 +35,9 @@ var ProjectView = Backbone.View.extend(
 			// Site
 			if(project.get("site"))
 			{
-				$("#site").find("a").text(project.get("site"));
+				html = this.linkTemplate(project.get("site"));
+				$("#site").find("p").remove();
+				$("#site").append(html);
 				$("#site").show();
 			}
 			else
@@ -45,11 +53,31 @@ var ProjectView = Backbone.View.extend(
 
 			// Roles
 			html = this.listTemplate({item: project.get("roles")});
+			$("#roles").find("ul").remove();
 			$("#roles").append(html);
 
-			// techs
+			// Techs
 			html = this.listTemplate({item: project.get("technologies")});
+			$("#techs").find("ul").remove();
 			$("#techs").append(html);
+
+			// Links
+			if(project.get("links"))
+			{
+				html = this.linkListTemplate({item: project.get("links")});
+				$("#links").find("ul").remove();
+				$("#links").append(html);
+				$("#links").show();
+			}
+			else
+			{
+				$("#links").hide();
+			}
+
+			// Images
+			html = this.imageTemplate({image: project.get("images")});
+			$("#projectImages").empty();
+			$("#projectImages").append(html);
 		}
 	}
 
