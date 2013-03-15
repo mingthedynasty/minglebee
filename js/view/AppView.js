@@ -6,6 +6,8 @@ var AppView = Backbone.View.extend(
 		this.model.on("change:currentState", this.handleCurrentStateChange, this);
 	
 		var navView = new NavView({model: this.model});
+		var projectView = new ProjectView({model: this.model});
+		
 		this.handleCurrentStateChange();
 	},
 

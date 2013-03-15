@@ -2,6 +2,7 @@
     "projects" : [
         {
             "name" : "MotoGP Stats",
+            "personal" : true,
             "site" : "http://www.minglebee.com/gp",
             "background" : "I love all things MotoGP, the premier motorcycle road-racing championship. I love data visualization. The logical conclusion was for me to create a visualization of MotoGP racing statistics. The project explores different means of viewing a large set of data in the hopes of providing new and novel ways to understand the championship, invidual races and interrelationships between riders, manufacturers, tires makes, and teams.",
             "features" : "The initial screen displays a comprehensive season view of the championship Users can drill down into each race to explore visualizations of lap graphs, gap differences by lap, lap times, and average speeds. These details can also be cross referenced by tire make, manufacturer and lap time data.",
@@ -35,6 +36,7 @@
         {
             "name" : "blog bubbles",
             "site" : "http://www.minglebee.com/gp",
+            "NewKey" : true,
             "background" : "After seeing Apple's RSS visualizer screensaver, I decided to implement a web app version of my own. I wanted to keep the same ambient movment of the Apple version but have multiple feeds visible at a time.  In order to extend the concept further, I tried to explore ways to visually convey each feed's characteristics such as number of posts and post dates.",
             "features" : "In the upper left, users can enter in the url of their desired feeds or select from a pre-filled drop down list.  The size and opacity of each post represnts how recently it was posted, with larger diameters mapping to more recent posts.  To refine the idea, posts made during the last 24 hours appear with a glow, drawing the user's attention.  When a feed is maximed, the posts are arranged chronologically around a circle, with the selcted post's content in the center. ",
             "roles" : [

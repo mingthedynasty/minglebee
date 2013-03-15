@@ -37,7 +37,7 @@ var AppModel = Backbone.Model.extend(
 	//------------------------------------------------
 	handleProjectsLoad: function()
 	{
-		console.log("loaded!!!", this.get("projects"));
+		this.set("activeProject", this.get("projects").at(0));
 	},
 
 
@@ -50,7 +50,7 @@ var AppModel = Backbone.Model.extend(
 	handleShowPlayProject: function()
 	{
 		this.set("currentState", AppState.PLAY);
-		// this.set("activeProject", null);
+		this.set("activeProject", this.get("projects").at(0));
 	},
 
 	handleShowWorkProject: function()

@@ -10,6 +10,7 @@
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/underscore.js"></script>
 		<script src="js/lib/backbone.js"></script>
+		<script src="js/lib/handlebars.js"></script>
 
 		<script src="js/AppState.js"></script>
 		<script src="js/model/AppModel.js"></script>
@@ -18,12 +19,22 @@
 		<script src="js/router/AppRouter.js"></script>
 		<script src="js/view/NavView.js"></script>
 		<script src="js/view/AppView.js"></script>
+		<script src="js/view/ProjectView.js"></script>
 		<script src="js/AppMain.js"></script>
 
 		<!-- Typekit -->
 		<script type="text/javascript" src="//use.typekit.net/lfc5hvq.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+		<!-- Templates -->
+		<script id="info-list-template" type="text/x-handlebars-template">
+			<ul>
+				{{#each item}}
+				<li>{{this}}</li>
+				{{/each}}
+			</ul>
+		</script>
+
 	</head>
 
 	<body>
@@ -52,32 +63,27 @@
 			<div id="nextButton" class="project-nav-button">&gt;</div>
 			<div id="projectContents">
 				<div id="projectInfo">
-					<h1>MotoGP Stats</h1>
+					<h1 id="title"></h1>
 					<div class="separator"></div>
-					<section>
+					<section id="site">
 						<h1>Site</h1>
-						<p><a>http://www.minglebee.com/gp</a></p>
+						<p><a></a></p>
 					</section>
-					<section>
+					<section id="background">
 						<h1>Background</h1>
-						<p>I love all things MotoGP, the premier motorcycle road-racing championship.  I love data visualization.  The logical conclusion was for me to create a visualization of MotoGP racing statistics.  The project explores different means of viewing a large set of data in the hopes of providing new and novel ways to understand the championship, invidual races and interrelationships between riders, manufacturers, tires makes, and teams.</p>
+						<p></p>
 					</section>
-					<section>
+					<section id="features">
 						<h1>Features</h1>
-						<p>The initial screen displays a comprehensive season view of the championship  Users can drill down into each race to explore visualizations of lap graphs, gap differences by lap, lap times, and average speeds.  These details can also be cross referenced by tire make, manufacturer and lap time data.</p>
+						<p></p>
 					</section>
-					<section>
+					<section id="roles">
 						<h1>Roles</h1>
-						<ul>
-							<li>Interaction Designer</li>
-							<li>Visual Designer</li>
-							<li>Engineer</li>
+						<ul></ul>
 					</section>
-					<section>
+					<section id="techs">
 						<h1>Technologies</h1>
-						<ul>
-							<li>Flash, AS3</li>
-						</ul>
+						<ul></ul>
 					</section>
 				</div>
 				<div id="projectImages">
