@@ -1,0 +1,270 @@
+*
+{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+body
+{
+	font-family: "open-sans", sans-serif;
+	color: #555;
+}
+
+
+h1
+{
+	color: rgb(218, 0, 130);
+	font-family: "chaparral-pro", serif;
+	font-style: italic;
+	font-weight: 600;
+	font-size: 40px;
+}
+
+h1, h2
+{
+	font-family: "ff-tisa-sans-web-pro";
+	font-weight: normal;
+}
+
+
+ul
+{
+	list-style: none;
+}
+
+a
+{
+	cursor: pointer;
+	-webkit-transition: all .2s cubic-bezier(0, 0, 0.25, 1);
+}
+
+a:hover, a:link:hover
+{
+	color: rgb(218, 0, 130);
+}
+
+a:link
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+p
+{
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+/*p
+{
+	font-size: 17px;
+	line-height: 1.4em;
+	font-family: "chaparral-pro", serif;
+}*/
+
+
+
+/**********************
+/*  SHARED
+/**********************/
+.separator
+{
+	height: 0px;
+	border-bottom: 1px dotted #AAA;
+	margin: 20px 0px;
+
+}
+
+.center-container
+{
+	text-align: center;
+}
+
+
+/**********************
+/*  HEADER
+/**********************/
+header
+{
+	width: 100%;
+	height: 60px;
+	background-color: #B2E5CF;
+	box-shadow: 0px 0px 10px #888888;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+}
+
+.logo
+{
+	background-image: url("../assets/bee.png");
+	width: 27px;
+	height: 26px;
+	float: left;
+	margin-left: 20px;
+	margin-top: 16px;
+	opacity: .8;
+}
+
+nav
+{
+	width: 700px;
+	margin: auto;
+}
+
+nav li
+{
+	float: left;
+	width: 33.3%;
+	text-align: center;
+	line-height: 60px;
+}
+
+nav li a
+{
+	display: block;
+	text-transform: uppercase;
+	color: rgb(100, 100, 100);
+	font-size: 16px;
+	font-family: "source-sans-pro";
+	font-weight: bold;
+	letter-spacing: .07em;
+}
+
+nav li a.selected
+{
+	color: rgb(218, 0, 130);
+	text-shadow: 0px 1px 0px #FFF;
+}
+
+
+
+/**********************
+/*  ME
+/**********************/
+#me
+{
+	width: 539px;
+	margin: 140px auto 0px auto;
+}
+
+
+#meImage
+{
+	background-image: url("../assets/me.png");
+	width: 218px;
+	height: 218px;
+	margin: 40px auto;
+}
+
+#me li
+{
+	padding-bottom: 20px;
+	float: right;
+	margin-left: 40px;
+}
+
+#me li a
+{
+	text-transform: uppercase;
+}
+
+
+#me p
+{
+	font-size: 16px;
+}
+
+/**********************
+/*  PROJECT
+/**********************/
+#projectContents
+{
+	width: 960px;
+	margin: 140px auto 0px auto;
+	background-color: #EEE;
+}
+
+#projectInfo
+{
+	width: 339px;
+	height: 500px;
+	float: left;
+}
+
+#projectInfo h1
+{
+	color: #333;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 23px;	
+}
+
+#projectInfo section
+{
+	margin-bottom: 20px;
+}
+
+#projectInfo section h1, #projectImages figurecaption
+{
+	font-family: "source-sans-pro";	
+	text-transform: uppercase;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 12px;
+	line-height: 2.4em;
+	color: #BBB;
+}
+
+#projectInfo li
+{
+	font-size: 15px;
+	line-height: 1.6em;
+}
+
+#projectImages
+{
+	float: right;
+}
+
+#projectImages figure
+{
+	margin-bottom: 20px;
+}
+
+.project-image
+{
+	width: 560px;
+	height: 375px;
+	background-color: #CCC;
+}
+
+.project-nav-button
+{
+	width: 50px;
+	height: 50px;
+	background-color: #CCC;
+	position: fixed;
+	top: 50%;
+	margin-top: -25px;
+
+	color: #FFF;
+	font-size: 40px;
+	line-height: 42px;
+	text-align: center;
+
+}
+
+#prevButton
+{
+	float: left;
+	left: 10px;
+}
+
+#nextButton
+{
+	float: right;
+	right: 10px;
+}
