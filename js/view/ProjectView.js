@@ -15,6 +15,7 @@ var ProjectView = Backbone.View.extend(
 		
 		// Handlers
 		this.model.on("change:activeProject", this.handleProjectChange, this);
+		$("#nextButton").click($.proxy(this.handleNextClick, this));
 
 		this.setElement($("#project"));
 	},
@@ -79,6 +80,13 @@ var ProjectView = Backbone.View.extend(
 			$("#projectImages").empty();
 			$("#projectImages").append(html);
 		}
+	},
+
+
+	handleNextClick: function()
+	{
+		this.model.showNextProject();
+		console.log(this.model.hasNextProject());
 	}
 
 })

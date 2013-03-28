@@ -2,8 +2,8 @@ var AppRouter = Backbone.Router.extend(
 {
 	routes: 
 	{
-		"play": "showPlayProject",
-		"work": "showWorkProject",
+		"play/:index": "showPlayProject",
+		"work/:index": "showWorkProject",
 		"":  "defaultRoute"    // index.html
 	}
 })
