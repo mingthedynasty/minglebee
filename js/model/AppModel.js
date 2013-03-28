@@ -92,8 +92,27 @@ var AppModel = Backbone.Model.extend(
 	//------------------------------------------------
 	updateActiveProject: function(index)
 	{
-		this.set("activeProject", this.get("activeProjects")[index]);
 		this.set("activeIndex", Number(index));	
+		this.set("activeProject", this.get("activeProjects")[index]);
+	},
+
+
+	showProjectAt: function(index)
+	{
+		var state = this.get("currentState");
+		if(state != AppState.ME)
+		{
+			if(this.hasProjectAt(index))
+			{
+				Backbone.history.navigate(state + "/" + index, true);
+			}
+		}		
+	},
+
+
+	hasProjectAt: function(index)
+	{
+		return index < this.get("activeProjects").length && index >= 0;
 	},
 
 
@@ -120,22 +139,26 @@ var AppModel = Backbone.Model.extend(
 
 	showNextProject: function()
 	{
-		var state = this.get("currentState");
-		if(state != AppState.ME)
-		{
-			var index = this.get("activeIndex") + 1;
-			if(index < this.get("activeProjects").length)
-			{
-				Backbone.history.navigate(state + "/" + index, true);
-			}
-		}
+		this.showProjectAt(this.get("activeIndex") + 1);
 	},
 
 
 	hasNextProject: function()
 	{
-		var index = this.get("activeIndex");
-		return index + 1 < this.get("activeProjects").length;
+		return this.hasProjectAt(this.get("activeIndex") + 1);
+	},
+
+
+	showPrevProject: function()
+	{
+		this.showProjectAt(this.get("activeIndex") - 1);
+	},
+
+
+	hasPrevProject: function()
+	{
+		return this.hasProjectAt(this.get("activeIndex") - 1);
 	}
+
 
 })

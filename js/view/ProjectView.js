@@ -15,7 +15,8 @@ var ProjectView = Backbone.View.extend(
 		
 		// Handlers
 		this.model.on("change:activeProject", this.handleProjectChange, this);
-		$("#nextButton").click($.proxy(this.handleNextClick, this));
+		$("#nextButton").click($.proxy(this.handleNavClick, this));
+		$("#prevButton").click($.proxy(this.handleNavClick, this));
 
 		this.setElement($("#project"));
 	},
@@ -80,13 +81,47 @@ var ProjectView = Backbone.View.extend(
 			$("#projectImages").empty();
 			$("#projectImages").append(html);
 		}
+
+
+		this.updateNavButtons();
 	},
 
 
-	handleNextClick: function()
+	handleNavClick: function(event)
 	{
-		this.model.showNextProject();
-		console.log(this.model.hasNextProject());
+		if(event.target == $("#nextButton")[0])
+		{
+			this.model.showNextProject();
+		}
+		else if(event.target == $("#prevButton")[0])
+		{
+			this.model.showPrevProject();
+		}
+	},
+
+
+	//------------------------------------------------
+	// Helpers 
+	//------------------------------------------------
+	updateNavButtons: function()
+	{
+		if(this.model.hasNextProject())
+		{
+			$("#nextButton").show();
+		}
+		else
+		{
+			$("#nextButton").hide();
+		}
+
+		if(this.model.hasPrevProject())
+		{
+			$("#prevButton").show();
+		}
+		else
+		{
+			$("#prevButton").hide();
+		}
 	}
 
 })
