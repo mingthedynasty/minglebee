@@ -156,7 +156,8 @@ nav li a.selected
 
 #meImage
 {
-	background-image: url("../assets/me.png");
+	background-image: url("../assets/me_2x.png");
+	background-size: 218px 218px;
 	width: 218px;
 	height: 218px;
 	margin: 40px auto;
@@ -233,14 +234,17 @@ nav li a.selected
 
 #projectImages figure
 {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 .project-image
 {
-	width: 560px;
-	height: 375px;
+	/*width: 560px;*/
+	/*height: 375px;*/
+	height: 725px;
 	background-color: #CCC;
+	box-shadow: 0px 1px 15px #DDD;
+	outline: #E1E1E1 solid 1px;
 }
 
 .project-nav-button

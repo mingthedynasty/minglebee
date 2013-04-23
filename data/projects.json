@@ -30,19 +30,23 @@
             ],
             "images" : [
                 {
-                    "url" : "image/url",
+                    "url" : "motogp_1.png",
                     "caption" : "Some image #1"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "motogp_2.png",
                     "caption" : "Some image #2"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "motogp_4.png",
                     "caption" : "Some image #3"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "motogp_5.png",
+                    "caption" : "Some image #4"
+                },
+                {
+                    "url" : "motogp_6.png",
                     "caption" : "Some image #4"
                 }
             ]
@@ -68,20 +72,24 @@
             ],
             "images" : [
                 {
-                    "url" : "image/url",
+                    "url" : "stitchr_1.png",
                     "caption" : "Some image #1"
                 },
                 {
-                    "url" : "image/url",
-                    "caption" : "Some image #2"
+                    "url" : "stitchr_3.png",
+                    "caption" : "Some image #3",
+                    "width" : "560",
+                    "height" : "725"
                 },
                 {
-                    "url" : "image/url",
-                    "caption" : "Some image #3"
+                    "url" : "stitchr_4.png",
+                    "caption" : "Some image #4",
+                    "width" : "560",
+                    "height" : "560"
                 },
                 {
-                    "url" : "image/url",
-                    "caption" : "Some image #4"
+                    "url" : "stitchr_5.png",
+                    "caption" : "Some image #1"
                 }
             ]
         },

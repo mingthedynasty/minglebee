@@ -30,7 +30,7 @@ var ProjectView = Backbone.View.extend(
 	//------------------------------------------------
 	handleProjectChange: function()
 	{
-		var html;
+		var html, element;
 		var project = this.model.get("activeProject");
 		if(project)
 		{
@@ -81,8 +81,31 @@ var ProjectView = Backbone.View.extend(
 
 			// Images
 			html = this.imageTemplate({image: project.get("images")});
+			element = $(html);
+
+			var image, w, h;
+			element.find("div").each(function(index) 
+			{
+				image = project.get("images")[index];
+  				if(image.width)
+  				{
+  					w = image.width + "px";
+  					h = image.height + "px";
+  				}
+  				else
+  				{
+  					w = "560px";
+  					h = "375px";
+  				}
+
+  				$(this).css({width: w, height: h});
+				$(this).css("background-size", w + " " + h);
+			});
+
+			
+
 			$("#projectImages").empty();
-			$("#projectImages").append(html);
+			$("#projectImages").append(element);
 		}
 
 		this.createSubNav();
@@ -108,29 +131,32 @@ var ProjectView = Backbone.View.extend(
 	//------------------------------------------------
 	createSubNav: function()
 	{
-		var html, project, element;
-		var self = this;
-		var projects = this.model.getCurrentProjects();
-
-		function createHandler(project)
+		if(this.model.get("currentState") != AppState.ME)
 		{
-			return function()
+			var html, project, element;
+			var self = this;
+			var projects = this.model.getCurrentProjects();
+
+			function createHandler(project)
 			{
-				self.model.showProject(project);
+				return function()
+				{
+					self.model.showProject(project);
+				}
 			}
-		}
 
-		$("#otherProjects").empty();
-		for(var i = 0; i < projects.length; i++)
-		{
-			project = projects[i];
-			if(projects[i] != this.model.get("activeProject"))
+			$("#otherProjects").empty();
+			for(var i = 0; i < projects.length; i++)
 			{
-				html = this.subNavTemplate({title: project.get("name")});
-				element = $(html);
-				element.click(createHandler(project));
+				project = projects[i];
+				if(projects[i] != this.model.get("activeProject"))
+				{
+					html = this.subNavTemplate({title: project.get("name")});
+					element = $(html);
+					element.click(createHandler(project));
 
-				$("#otherProjects").append(element);	
+					$("#otherProjects").append(element);	
+				}
 			}
 		}
 	},
