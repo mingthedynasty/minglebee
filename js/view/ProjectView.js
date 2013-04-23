@@ -148,15 +148,13 @@ var ProjectView = Backbone.View.extend(
 			$("#otherProjects").empty();
 			for(var i = 0; i < projects.length; i++)
 			{
-				project = projects[i];
-				if(projects[i] != this.model.get("activeProject"))
-				{
-					html = this.subNavTemplate({title: project.get("name")});
-					element = $(html);
-					element.click(createHandler(project));
+				project = projects[i];				
+				html = this.subNavTemplate({title: project.get("name")});
+				element = $(html);
+				element.click(createHandler(project));
 
-					$("#otherProjects").append(element);	
-				}
+				$("#otherProjects").append(element);	
+				
 			}
 		}
 	},

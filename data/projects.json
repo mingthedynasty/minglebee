@@ -113,51 +113,19 @@
             ],
             "images" : [
                 {
-                    "url" : "image/url",
+                    "url" : "frog_1.png",
                     "caption" : "Some image #1"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "frog_2.png",
                     "caption" : "Some image #2"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "frog_3.png",
                     "caption" : "Some image #3"
                 },
                 {
-                    "url" : "image/url",
-                    "caption" : "Some image #4"
-                }
-            ]
-        },
-        {
-            "name" : "Blog Bubbles",
-            "type" : "personal",
-            "background" : "After seeing Apple's RSS visualizer screensaver, I decided to implement one of my own.  I wanted to keep the same ambient movement of the Apple version but have multiple feeds visible at one time.  In order to extend the concept further, I tried to explore ways to visually convey each feed's characteristics.",
-            "features" : "In the upper left, users can enter in the url of their desired feeds or select from a pre-filled drop down list.  The size and opacity of the sphere represents how recently it was posted, with larger diameters mapping to more recent posts.  To refine the idea, posts made during the last 24 hours appear with a glow, drawing more attention to them.  When a feed is maximized, the posts are arranged chronologically around a circle, with the details of the selected post in the center.",
-            "roles" : [
-                "Interaction Designer",
-                "Visual Designer",
-                "Developer"
-            ],
-            "technologies" : [
-                "LZX"
-            ],
-            "images" : [
-                {
-                    "url" : "image/url",
-                    "caption" : "Some image #1"
-                },
-                {
-                    "url" : "image/url",
-                    "caption" : "Some image #2"
-                },
-                {
-                    "url" : "image/url",
-                    "caption" : "Some image #3"
-                },
-                {
-                    "url" : "image/url",
+                    "url" : "frog_4.png",
                     "caption" : "Some image #4"
                 }
             ]
@@ -168,8 +136,50 @@
             "background" : "After seeing Apple's RSS visualizer screensaver, I decided to implement a web app version of my own. I wanted to keep the same ambient movment of the Apple version but have multiple feeds visible at a time.  In order to extend the concept further, I tried to explore ways to visually convey each feed's characteristics such as number of posts and post dates.",
             "features" : "In the upper left, users can enter in the url of their desired feeds or select from a pre-filled drop down list.  The size and opacity of each post represnts how recently it was posted, with larger diameters mapping to more recent posts.  To refine the idea, posts made during the last 24 hours appear with a glow, drawing the user's attention.  When a feed is maximed, the posts are arranged chronologically around a circle, with the selcted post's content in the center. ",
             "roles" : [
-                "Interaction Designer",
-                "Visual Designer",
+                "Developer"
+            ],
+            "technologies" : [
+                "LZX"
+            ],
+            "links" : [
+                {
+                    "url" : "http://www.engadget.com/2012/07/12/nbc-2012-london-olympics-second-screen-streaming-apps/",
+                    "label" : "Announcement on Engadget"
+                }
+            ],
+            "images" : [
+                {
+                    "url" : "olympics_1.png",
+                    "caption" : "Some image #1",
+                    "width" : "560",
+                    "height" : "797"
+                },
+                {
+                    "url" : "olympics_3.png",
+                    "caption" : "Some image #1",
+                    "width" : "560",
+                    "height" : "797"
+                },
+                {
+                    "url" : "olympics_2.png",
+                    "caption" : "Some image #2",
+                    "width" : "560",
+                    "height" : "421"
+                },
+                {
+                    "url" : "olympics_4.png",
+                    "caption" : "Some image #4",
+                    "width" : "234",
+                    "height" : "375"
+                }
+            ]
+        },
+        {
+            "name" : "Open Mobile Vision",
+            "type" : "work",
+            "background" : "After seeing Apple's RSS visualizer screensaver, I decided to implement a web app version of my own. I wanted to keep the same ambient movment of the Apple version but have multiple feeds visible at a time.  In order to extend the concept further, I tried to explore ways to visually convey each feed's characteristics such as number of posts and post dates.",
+            "features" : "In the upper left, users can enter in the url of their desired feeds or select from a pre-filled drop down list.  The size and opacity of each post represnts how recently it was posted, with larger diameters mapping to more recent posts.  To refine the idea, posts made during the last 24 hours appear with a glow, drawing the user's attention.  When a feed is maximed, the posts are arranged chronologically around a circle, with the selcted post's content in the center. ",
+            "roles" : [
                 "Developer"
             ],
             "technologies" : [
@@ -195,13 +205,15 @@
             ]
         },
         {
-            "name" : "Open Mobile Vision",
+            "name" : "San Francisco Symphony",
             "type" : "work",
+            "site" : {
+                "label" : "http://www.sfsymphony.org/timeline/",
+                "url" : "http://www.sfsymphony.org/timeline/#"
+            },
             "background" : "After seeing Apple's RSS visualizer screensaver, I decided to implement a web app version of my own. I wanted to keep the same ambient movment of the Apple version but have multiple feeds visible at a time.  In order to extend the concept further, I tried to explore ways to visually convey each feed's characteristics such as number of posts and post dates.",
             "features" : "In the upper left, users can enter in the url of their desired feeds or select from a pre-filled drop down list.  The size and opacity of each post represnts how recently it was posted, with larger diameters mapping to more recent posts.  To refine the idea, posts made during the last 24 hours appear with a glow, drawing the user's attention.  When a feed is maximed, the posts are arranged chronologically around a circle, with the selcted post's content in the center. ",
             "roles" : [
-                "Interaction Designer",
-                "Visual Designer",
                 "Developer"
             ],
             "technologies" : [
@@ -209,20 +221,16 @@
             ],
             "images" : [
                 {
-                    "url" : "image/url",
+                    "url" : "symphony_1.png",
                     "caption" : "Some image #1"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "symphony_2.png",
                     "caption" : "Some image #2"
                 },
                 {
-                    "url" : "image/url",
+                    "url" : "symphony_3.png",
                     "caption" : "Some image #3"
-                },
-                {
-                    "url" : "image/url",
-                    "caption" : "Some image #4"
                 }
             ]
         }
