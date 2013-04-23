@@ -57,6 +57,9 @@
 			{{/each}}
 		</script>
 
+		<script id="project-subnav-template" type="text/x-handlebars-template">
+			<li><a><div></div><p>{{title}}</p></a></li>
+		</script>
 	</head>
 
 	<body>
@@ -108,7 +111,14 @@
 						<h1>Technologies</h1>
 					</section>
 				</div>
-				<div id="projectImages"><div>
+				<div id="projectImages"></div>
+				<div class="clear-fix"></div>
+			</div>
+			<div id="subNav">
+				<div class="separator"></div>
+				<ul id="otherProjects">
+				</ul>
+				<div class="clear-fix"></div>
 			</div>
 		</div>
 	</body>

@@ -158,6 +158,36 @@ var AppModel = Backbone.Model.extend(
 	hasPrevProject: function()
 	{
 		return this.hasProjectAt(this.get("activeIndex") - 1);
+	},
+
+
+	getCurrentProjects: function()
+	{
+		var projects;
+		if(this.get("currentState") == AppState.PLAY)
+		{
+			projects = this.get("playProjects");
+		} 
+		else if(this.get("currentState") == AppState.WORK)
+		{
+			projects = this.get("workProjects");
+		}
+		return projects;
+	},
+
+
+	showProject: function(project)
+	{
+		var projects = this.getCurrentProjects();
+		for(var i = 0; i < projects.length; i++)
+		{
+			if(projects[i] == project)
+			{
+				this.showProjectAt(i);
+				break;
+			}
+		}
+
 	}
 
 

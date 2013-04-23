@@ -53,26 +53,19 @@ a:link
 {
 	color: inherit;
 	text-decoration: none;
-/*	border-bottom: 1px solid #999;*/
+	border-bottom: 1px dotted;
 }
-
-p
-{
-	font-size: 14px;
-	line-height: 1.5em;
-}
-
-p
-{
-	font-size: 15px;
-	line-height: 1.5em;
-	font-family: "museo-slab", sans-serif;
-}
-
 
 body
 {
+	font-size: 16px;
+	line-height: 1.5em;
 	font-family: "museo-slab", sans-serif;
+}
+
+.clear-fix
+{
+	clear: both;
 }
 
 /**********************
@@ -194,7 +187,6 @@ nav li a.selected
 {
 	width: 960px;
 	margin: 140px auto 0px auto;
-	background-color: #EEE;
 }
 
 #projectInfo
@@ -277,4 +269,40 @@ nav li a.selected
 {
 	float: right;
 	right: 10px;
+}
+
+
+/**********************
+/*  PROJECT SUBNAV
+/**********************/
+#subNav
+{
+	width: 960px;
+	margin: 50px auto;
+}
+
+#subNav .separator
+{
+	margin-bottom: 40px;
+}
+
+#subNav li
+{
+	float: left;
+	width: 160px;
+	margin-right: 20px;
+}
+
+#subNav li a div
+{
+	width: 160px;
+	height: 160px;
+	background-color: #CCC;
+}
+
+#subNav li p
+{
+	font-family: "source-sans-pro";	
+	margin-top: 5px;
+	text-transform: uppercase;
 }

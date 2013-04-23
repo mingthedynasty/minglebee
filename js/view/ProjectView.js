@@ -4,6 +4,7 @@ var ProjectView = Backbone.View.extend(
 	listTemplate: null,
 	linkListTemplate: null,
 	imageTemplate: null,
+	subNavTemplate: null,
 
 	initialize: function()
 	{
@@ -12,7 +13,9 @@ var ProjectView = Backbone.View.extend(
 		this.linkListTemplate = Handlebars.compile($("#info-link-list-template").html());
 		this.listTemplate = Handlebars.compile($("#info-list-template").html());
 		this.imageTemplate = Handlebars.compile($("#project-image-template").html());
-		
+		this.subNavTemplate = Handlebars.compile($("#project-subnav-template").html());
+
+
 		// Handlers
 		this.model.on("change:activeProject", this.handleProjectChange, this);
 		$("#nextButton").click($.proxy(this.handleNavClick, this));
@@ -82,7 +85,7 @@ var ProjectView = Backbone.View.extend(
 			$("#projectImages").append(html);
 		}
 
-
+		this.createSubNav();
 		this.updateNavButtons();
 	},
 
@@ -103,6 +106,36 @@ var ProjectView = Backbone.View.extend(
 	//------------------------------------------------
 	// Helpers 
 	//------------------------------------------------
+	createSubNav: function()
+	{
+		var html, project, element;
+		var self = this;
+		var projects = this.model.getCurrentProjects();
+
+		function createHandler(project)
+		{
+			return function()
+			{
+				self.model.showProject(project);
+			}
+		}
+
+		$("#otherProjects").empty();
+		for(var i = 0; i < projects.length; i++)
+		{
+			project = projects[i];
+			if(projects[i] != this.model.get("activeProject"))
+			{
+				html = this.subNavTemplate({title: project.get("name")});
+				element = $(html);
+				element.click(createHandler(project));
+
+				$("#otherProjects").append(element);	
+			}
+		}
+	},
+
+
 	updateNavButtons: function()
 	{
 		if(this.model.hasNextProject())
