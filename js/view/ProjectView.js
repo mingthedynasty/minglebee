@@ -149,7 +149,9 @@ var ProjectView = Backbone.View.extend(
 			for(var i = 0; i < projects.length; i++)
 			{
 				project = projects[i];				
-				html = this.subNavTemplate({title: project.get("name")});
+				html = this.subNavTemplate(
+					{title: project.get("name"), 
+					url: project.get("thumb")});
 				element = $(html);
 				element.click(createHandler(project));
 
