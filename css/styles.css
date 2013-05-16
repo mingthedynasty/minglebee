@@ -15,7 +15,6 @@ body
 h1
 {
 	color: rgb(218, 0, 130);
-	font-family: "chaparral-pro", serif;
 	font-style: italic;
 	font-weight: 600;
 	font-size: 40px;
@@ -36,6 +35,7 @@ ul
 a
 {
 	cursor: pointer;
+	font-family: "ff-tisa-sans-web-pro";
 	-webkit-transition: all .2s cubic-bezier(0, 0, 0.25, 1);
 }
 

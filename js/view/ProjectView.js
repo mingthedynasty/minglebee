@@ -110,6 +110,8 @@ var ProjectView = Backbone.View.extend(
 
 		this.createSubNav();
 		this.updateNavButtons();
+
+		$("body").scrollTop(0);
 	},
 
 
