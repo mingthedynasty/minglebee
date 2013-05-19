@@ -1,0 +1,230 @@
+*
+{
+	margin: 0px;
+	border: 0px;
+	padding: 0px;
+}
+
+
+body
+{
+	font-size: 14px;
+	line-height: 1.5em;
+	font-family: "museo-slab", sans-serif;	
+}
+
+h1
+{
+	font-size: 23px;
+	font-family: "ff-tisa-sans-web-pro";
+	font-weight: normal;
+}
+
+.separator
+{
+	height: 0px;
+	border-bottom: 1px dotted #AAA;
+	margin: 10px 0px;
+}
+
+
+.nav-button
+{
+	width: 50px;
+	height: 50px;
+	background-color: #CCC;
+	position: fixed;
+	top: 50%;
+	margin-top: -25px;
+}
+
+#prevButton
+{
+	left: 4%;
+	margin-left: -25px;
+}
+
+#nextButton
+{
+	right: 4%;
+	margin-right: -25px;
+}
+
+#wrapper
+{
+
+	max-width: 960px;
+	width: 80%;
+	margin: 30px auto 0px auto;
+}
+
+
+.smaller-resolution
+{
+	display: none;
+}
+
+.larger-resolution
+{
+	display: block;
+}
+
+#info .separator
+{
+	margin-right: 60px;
+}
+
+
+@media screen and (max-width: 1000px) { 
+
+.title-area
+{
+	position: fixed;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: -80px;
+	background-image: -webkit-linear-gradient(bottom,  rgba(255,255,255,0) 0px, rgba(255,255,255,1) 15px);
+}
+
+.separator
+{
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+#wrapper
+{
+	width: 80%;
+	margin-top: 80px;
+}
+
+.smaller-resolution
+{
+	display: block;
+}
+
+.larger-resolution
+{
+	display: none;
+}
+
+h1
+{
+	text-align: center;
+}
+}
+
+@media screen and (max-width: 730px) { 
+
+.title-area
+{
+	position: fixed;
+	width: 100%;
+}
+
+.separator
+{
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+
+#wrapper
+{
+	width: 90%;
+}
+
+.nav-button
+{
+	top: 8px;
+	width: 30px;
+	height: 30px;
+	margin-top: 5px;
+}
+
+#prevButton
+{
+	left: 5%;
+	margin-left: 0px;
+}
+
+#nextButton
+{
+	right: 5%;
+	margin-right: 0px;
+}
+
+
+
+}
+
+#info
+{
+	width: 40%;
+	float: left;
+
+}
+
+#info p
+{
+	padding-right: 60px;
+}
+
+@media screen and (max-width: 1000px) { 
+
+#info
+{
+	width: 100%;
+	float: none;
+}
+
+#info p{
+	padding-right: 0px;
+}
+
+}
+
+
+#images
+{
+	width: 60%;
+	/*background-color: #DDD;*/
+	float: right;
+}
+
+@media screen and (max-width: 1000px) { 
+#images
+{
+	width: 100%;
+	float: none;
+}
+
+#images
+{
+	margin-top: 40px;
+}
+}
+
+#images img
+{
+	width: 100%;
+	margin-bottom: 60px;
+	border: 1px solid #DDD;
+}
+
+@media screen and (max-width: 730px) { 
+
+#images img
+{
+	margin-bottom: 30px;
+}
+}
+
+.clear-fix
+{
+	clear: both;
+}
+
+
+
