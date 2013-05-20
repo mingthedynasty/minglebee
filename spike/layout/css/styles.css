@@ -74,6 +74,15 @@ h1
 	margin-right: 60px;
 }
 
+.others
+{
+	width: 160px;
+	height: 160px;
+	background-color: #DDD;
+	display: inline-block;
+	margin: 20px 20px 20px 0px;
+}
+
 
 @media screen and (max-width: 1000px) { 
 
@@ -87,7 +96,7 @@ h1
 	background-image: -webkit-linear-gradient(bottom,  rgba(255,255,255,0) 0px, rgba(255,255,255,1) 15px);
 }
 
-.separator
+.title-area .separator
 {
 	margin-right: 10%;
 	margin-left: 10%;
@@ -123,7 +132,7 @@ h1
 	width: 100%;
 }
 
-.separator
+.title-area .separator
 {
 	margin-right: 5%;
 	margin-left: 5%;
@@ -155,7 +164,17 @@ h1
 	margin-right: 0px;
 }
 
+.others
+{
+	width: 85px;
+	height: 85px;
+	margin: 0px 15px 10px 0px;
+}
 
+.others:last-child
+{
+	margin-right: 0px;
+}
 
 }
 

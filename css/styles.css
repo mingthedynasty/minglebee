@@ -84,6 +84,16 @@ body
 	text-align: center;
 }
 
+.large-resolution
+{
+	display: block;
+}
+
+.smaller-resolutions
+{
+	display: none;
+}
+
 
 /**********************
 /*  HEADER
@@ -187,19 +197,19 @@ nav li a.selected
 /**********************/
 #projectContents
 {
-	width: 960px;
+	max-width: 960px;
+	width: 80%;
 	margin: 140px auto 0px auto;
 }
 
-#projectInfo
+.info
 {
-	width: 339px;
-	height: 500px;
+	width: 40%;
 	float: left;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 }
 
-#projectInfo h1
+.info h1, #projectIntro h1
 {
 	color: #333;
 	font-weight: normal;
@@ -207,12 +217,12 @@ nav li a.selected
 	font-size: 23px;	
 }
 
-#projectInfo section
+.info section
 {
 	margin-bottom: 20px;
 }
 
-#projectInfo section h1, #projectImages figurecaption
+.info section h1, #projectImages figurecaption
 {
 	font-family: "source-sans-pro";	
 	text-transform: uppercase;
@@ -223,14 +233,21 @@ nav li a.selected
 	color: #BBB;
 }
 
-#projectInfo li
+.info li
 {
 	font-size: 15px;
 	line-height: 1.6em;
 }
 
+.info > *
+{
+	margin-right: 60px;
+}
+
+
 #projectImages
 {
+	width: 60%;
 	float: right;
 }
 
@@ -241,11 +258,23 @@ nav li a.selected
 
 .project-image
 {
-	width: 560px;
-	height: 375px;
+	width: 100%;
+/*	width: 560px;
+	height: 375px;*/
 	background-color: #CCC;
 	box-shadow: 0px 1px 15px #DDD;
 	outline: #E1E1E1 solid 1px;
+}
+
+#projectIntro
+{
+	position: fixed;
+	text-align: center;
+	top: 0px;
+	padding-top: 90px;
+	padding-bottom: 10px;
+	width: 100%;
+	background-image: -webkit-linear-gradient(bottom,  rgba(255,255,255,0) 0px, rgba(255,255,255,1) 15px);
 }
 
 .project-nav-button
@@ -255,7 +284,6 @@ nav li a.selected
 	background-color: #CCC;
 	position: fixed;
 	top: 50%;
-	margin-top: -25px;
 	cursor: pointer;
 
 	color: #FFF;
@@ -263,6 +291,7 @@ nav li a.selected
 	line-height: 42px;
 	text-align: center;
 }
+
 
 #prevButton
 {
@@ -276,13 +305,119 @@ nav li a.selected
 	right: 10px;
 }
 
+@media screen and (max-width: 1000px) { 
+
+	.large-resolution
+	{
+		display: none;
+	}
+
+	.smaller-resolutions
+	{
+		display: block;
+	}
+
+	#basicProjectInfo
+	{
+		padding-top: 20px;
+	}
+
+	.info
+	{
+		width: 100%;
+		float: none;
+	}
+
+	#projectIntro h1
+	{
+		width: 80%;
+		margin: 0px 10%;
+	}
+
+	#projectIntro .separator
+	{
+		width: 80%;
+		margin-right: 10%;
+		margin-left: 10%;
+	}
+
+	#projectImages
+	{
+		padding-top: 20px;
+		width: 100%;
+		float: none;
+	}
+
+	.title-area
+	{
+		width: 80%;
+		margin: 0px 10%;
+	}
+}
+
+
+@media screen and (max-width: 730px) { 
+
+	#projectContents
+	{
+		width: 90%;
+	}
+
+	#basicProjectInfo
+	{
+		padding-top: 0px;
+	}
+
+	.info > *
+	{
+		margin-right: 0px;
+	}
+
+	#projectIntro h1
+	{
+		width: 90%;
+		margin: 0px 5%;
+	}
+
+	#projectIntro .separator
+	{
+		width: 90%;
+		margin-right: 5%;
+		margin-left: 5%;
+		margin-top: 15px;
+	}
+
+	.project-nav-button
+	{
+		width: 30px;
+		height: 30px;
+		top: 82px;
+		margin-top: 5px;
+		line-height: 27px;
+		font-size: 20px;
+		margin-top: 0px;
+	}
+
+	#prevButton
+	{
+		left: 5%;
+	}
+
+	#nextButton
+	{
+		right: 5%;
+	}
+}
+
+
 
 /**********************
 /*  PROJECT SUBNAV
 /**********************/
 #subNav
 {
-	width: 960px;
+	max-width: 960px;
+	width: 80%;
 	margin: 50px auto;
 }
 
@@ -322,4 +457,11 @@ nav li a.selected
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+
+/**********************
+/*  IPAD LANDSCAPE
+/**********************/
+@media screen and (max-width: 1024px) { 
 }

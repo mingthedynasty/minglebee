@@ -98,8 +98,8 @@ var ProjectView = Backbone.View.extend(
   					h = "375px";
   				}
 
-  				$(this).css({width: w, height: h});
-				$(this).css("background-size", w + " " + h);
+  				// $(this).css({width: w, height: h});
+				// $(this).css("background-size", w + " " + h);
 			});
 
 			
